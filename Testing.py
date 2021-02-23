@@ -41,7 +41,7 @@ def desafio3(param, url_json):
     print('Archivo guardado en' +os.getcwd() + neutral )
     df = pd.DataFrame(rows_negative, columns=['seller_id', 'site_id', 'nickname', 'total'])
     df.to_csv(os.getcwd() + negativo)
-    print(os.getcwd() + negativo)
+    print('Archivo guardado en' + os.getcwd() + negativo)
     df = pd.DataFrame(rows_positive, columns=['seller_id', 'site_id', 'nickname', 'total'])
     df.to_csv(os.getcwd() + positivo)
     print('Archivo guardado en' + os.getcwd() + positivo)
@@ -102,6 +102,7 @@ def desafio7(param, url_entrada):
     dataframefiltrado = dataframe.filter(['itemId', 'availableQuantity', 'porcentajeStock'])
     dataframefiltrado = dataframefiltrado.sort_values('porcentajeStock', ascending=False)
     print(dataframefiltrado)
+    print(param)
     pass
 
 
